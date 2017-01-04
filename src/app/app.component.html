@@ -1,7 +1,9 @@
 <div class="container">
       <div class="jumbotron">
-        <pre>{{usernameRef.errors | json}}</pre>
-        <form class="form-inline">
+        <pre><b>usernameRef.errors :</b> {{usernameRef.errors | json}} <br/>
+<b>formRef.value :</b> {{formRef.value | json}} <br/>
+<b>formRef.valid :</b> {{formRef.valid | json}}</pre>
+        <form class="form-inline" #formRef="ngForm">
 		  <div class="form-group">		    
 		    <div class="input-group">		  
 		      <input 

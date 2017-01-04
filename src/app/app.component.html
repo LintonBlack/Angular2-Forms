@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+      <div class="jumbotron">
+        <h1>{{usernameRef.valid}}</h1>
+        <form class="form-inline">
+		  <div class="form-group">		    
+		    <div class="input-group">		  
+		      <input 
+			      type="text" 
+			      required
+			      #usernameRef="ngModel" 
+			      class="form-control"  
+			      name="username" 
+			      id="exampleInputAmount"  
+			      [(ngModel)]="username" 
+			      placeholder="Username"/>		  
+		    </div>
+		  </div>
+		  <button type="submit" class="btn btn-primary">Sign up today</button>
+		</form>
+      </div>
+      <footer class="footer">
+        <p>© 2016 Company, Inc.</p>
+      </footer>
+</div>
+
+

@@ -1,12 +1,13 @@
 <div class="container">
       <div class="jumbotron">
-        <h1>{{usernameRef.valid}}</h1>
+        <pre>{{usernameRef.errors | json}}</pre>
         <form class="form-inline">
 		  <div class="form-group">		    
 		    <div class="input-group">		  
 		      <input 
 			      type="text" 
 			      required
+			      minlength="3"
 			      #usernameRef="ngModel" 
 			      class="form-control"  
 			      name="username" 

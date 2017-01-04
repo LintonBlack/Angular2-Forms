@@ -7,21 +7,35 @@
         		#formRef="ngForm"
 				(ngSubmit)="onSubmit(formRef.value)"
         		>
-		  <div class="form-group">		    
-		    <div class="input-group">		  
-		      <input 
-			      type="text" 
-			      required
-			      minlength="3"
-			      #usernameRef="ngModel" 
-			      class="form-control"  
-			      name="username" 
-			      id="exampleInputAmount"  
-			      [(ngModel)]="username" 
-			      placeholder="Username"/>	
+		  	<fieldset ngModelGroup="login">
+			  <div class="form-group">		    
+			    <div class="input-group">		  
+			      <input 
+				      type="text" 
+				      required
+				      minlength="3"
+				      #usernameRef="ngModel" 
+				      class="form-control"  
+				      name="username" 
+				      id="exampleInputAmount"  
+				      [(ngModel)]="username" 
+				      placeholder="Username"/>	
 
-		    </div>
-		  </div>
+			    </div>
+			  </div>
+			  <div class="form-group">		    
+			    <div class="input-group">		  
+			      <input 
+				      type="password"			    
+				      ngModel 
+				      required
+				      class="form-control"  
+				      name="password"
+				      placeholder="Password"/>	
+
+			    </div>
+			  </div>
+			</fieldset>
 		  <button type="submit" class="btn btn-primary">Sign up today</button>
 		   <div *ngIf="usernameRef.errors?.required" class=" has-error">this field is required</div>
 		   <div *ngIf="usernameRef.errors?.minlength" class=" has-error">

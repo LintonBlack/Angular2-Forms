@@ -8,3 +8,12 @@ input.ng-invalid {
 input.ng-valid {
 	border: 3px solid green;
 }
+
+pre {
+	    position: fixed;
+    top: 0;
+    right: 0;
+    background: #1578de;
+    color: #fff;
+    font-size: 14px;
+}

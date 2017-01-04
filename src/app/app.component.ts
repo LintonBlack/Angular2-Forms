@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+	@ViewChild('formRef') form;
   username;
 
   constructor() {
@@ -14,5 +15,10 @@ export class AppComponent {
 
   onSubmit(data) {
   	console.log(data)
+  }
+
+  ngAfterViewInit() {
+  	this.form.valueChanges
+  	.subscribe(v => console.table(v))
   }
 }

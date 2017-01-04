@@ -3,7 +3,10 @@
         <pre><b>usernameRef.errors :</b> {{usernameRef.errors | json}} <br/>
 <b>formRef.value :</b> {{formRef.value | json}} <br/>
 <b>formRef.valid :</b> {{formRef.valid | json}}</pre>
-        <form class="form-inline" #formRef="ngForm">
+        <form class="form-inline" 
+        		#formRef="ngForm"
+				(ngSubmit)="onSubmit(formRef.value)"
+        		>
 		  <div class="form-group">		    
 		    <div class="input-group">		  
 		      <input 

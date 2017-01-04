@@ -11,4 +11,8 @@ export class AppComponent {
   constructor() {
   	this.username = "John";
   }
+
+  onSubmit(data) {
+  	console.log(data)
+  }
 }

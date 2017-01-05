@@ -12,7 +12,8 @@ import "rxjs/add/operator/filter";
 export class AppComponent {
 	@ViewChild('formRef') form;
   username;
-  locations = ["Home", "Away"]
+  locations = ["Home", "Away", "London", "Estoban", "Geneve"];
+  skills = ["Javascript", "Angular2", "React", "VueJS", "PHP"];
 
   constructor() {
   	this.username = "John";

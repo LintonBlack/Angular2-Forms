@@ -12,6 +12,7 @@ import "rxjs/add/operator/filter";
 export class AppComponent {
 	@ViewChild('formRef') form;
   username;
+  locations = ["Home", "Away"]
 
   constructor() {
   	this.username = "John";

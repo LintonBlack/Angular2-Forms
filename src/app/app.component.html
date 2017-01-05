@@ -40,6 +40,16 @@
 			    </div>
 			  </div>
 			</fieldset>
+			<fieldset ngModelGroup="location">
+			  <div *ngFor="let location of locations" class="form-group">	
+			  <input 
+			  	type="radio" 
+			  	name="location"
+			  	ngModel
+			  	[value]="location">	    
+			    <label for="">{{location}}</label>
+			  </div>			
+			</fieldset>
 		  <button type="submit" class="btn btn-primary">Sign up today</button>
 		   <div *ngIf="usernameRef.errors?.required" class=" has-error">this field is required</div>
 		   <div *ngIf="usernameRef.errors?.minlength" class=" has-error">

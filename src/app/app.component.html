@@ -47,7 +47,7 @@
 			  	name="location"
 			  	ngModel
 			  	[value]="location">	    
-			    <label for="">{{location}}</label>
+			    <label [attr.for]="location">{{location}}</label>
 			  </div>			
 			</fieldset>
 		  <button type="submit" class="btn btn-primary">Sign up today</button>

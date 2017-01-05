@@ -43,6 +43,7 @@
 			<fieldset ngModelGroup="location">
 			  <div *ngFor="let location of locations" class="form-group">	
 			  <input 
+			  	[attr.id]="location"
 			  	type="radio" 
 			  	name="location"
 			  	ngModel

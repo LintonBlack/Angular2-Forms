@@ -1,5 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
 
+import {Observable} from "rxjs/Observable";
+import "rxjs/add/observable/combineLatest";
+import "rxjs/add/operator/filter";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -18,7 +22,13 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-  	this.form.valueChanges
-  	.subscribe(v => console.table(v))
+  	Observable.combineLatest(
+  		this.form.statusChanges,
+  		this.form.valueChanges,
+  		(status, value) => ({status, value}))
+    //Only get changes when status is VALID
+    .filter(({status}) => status === 'VALID')
+    .subscribe(({value})=> console.table(value))
+  	
   }
 }
